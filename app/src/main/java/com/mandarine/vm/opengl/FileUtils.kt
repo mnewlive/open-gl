@@ -2,11 +2,9 @@ package com.mandarine.vm.opengl
 
 import android.content.Context
 import android.content.res.Resources
-import android.content.res.Resources.NotFoundException
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
-
 
 /**
  * Created by vadim.
@@ -25,10 +23,6 @@ object FileUtils {
                     stringBuilder.append(it)
                     stringBuilder.append("\r\n")
                 }
-//                while ((line = bufferedReader!!.readLine()) != null) {
-//                    stringBuilder.append(line)
-//                    stringBuilder.append("\r\n")
-//                }
             } finally {
                     bufferedReader?.close()
             }

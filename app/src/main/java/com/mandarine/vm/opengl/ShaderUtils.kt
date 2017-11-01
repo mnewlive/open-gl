@@ -2,16 +2,6 @@ package com.mandarine.vm.opengl
 
 import android.content.Context
 import android.opengl.GLES20.*
-import android.opengl.GLES20.glDeleteShader
-import android.opengl.GLES20.GL_COMPILE_STATUS
-import android.opengl.GLES20.glCompileShader
-import android.opengl.GLES20.glShaderSource
-import android.opengl.GLES20.glCreateShader
-import android.opengl.GLES20.glDeleteProgram
-import android.opengl.GLES20.GL_LINK_STATUS
-import android.opengl.GLES20.glLinkProgram
-import android.opengl.GLES20.glAttachShader
-import android.opengl.GLES20.glCreateProgram
 
 /**
  * Created by vadim.
@@ -35,7 +25,7 @@ object ShaderUtils {
         return programId
     }
 
-    internal fun createShader(context: Context, type: Int, shaderRawId: Int): Int {
+    fun createShader(context: Context, type: Int, shaderRawId: Int): Int {
         val shaderText = FileUtils.readTextFromRaw(context, shaderRawId)
         return ShaderUtils.createShader(type, shaderText)
     }

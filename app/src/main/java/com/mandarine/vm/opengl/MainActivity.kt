@@ -3,9 +3,7 @@ package com.mandarine.vm.opengl
 import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
-import android.content.pm.ConfigurationInfo
 import android.opengl.GLSurfaceView
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 
@@ -28,12 +26,12 @@ class MainActivity : Activity() {
 
     override fun onPause() {
         super.onPause()
-        glSurfaceView!!.onPause()
+        glSurfaceView?.onPause()
     }
 
     override fun onResume() {
         super.onResume()
-        glSurfaceView!!.onResume()
+        glSurfaceView?.onResume()
     }
 
     private fun supportES2(): Boolean {
@@ -41,5 +39,4 @@ class MainActivity : Activity() {
         val configurationInfo = activityManager.deviceConfigurationInfo
         return configurationInfo.reqGlEsVersion >= 0x20000
     }
-
 }
